@@ -209,8 +209,9 @@ const BookingDetailsPage = () => {
             </button>
           )}
           
-                    
-            <a href={`/api/bookings/${booking._id}/invoice?token=${encodeURIComponent(localStorage.getItem("smartcater_token") || "")}`}
+             <a
+href={`${import.meta.env.VITE_API_URL}/api/bookings/${booking._id}/invoice?token=${encodeURIComponent(localStorage.getItem("smartcater_token") || "")}`}       
+            
             className="flex items-center gap-2 rounded-xl border border-stone-300 px-6 py-3 text-sm font-medium text-ink hover:border-paprika hover:text-paprika"
           >
             <Download size={15} /> Download Invoice
